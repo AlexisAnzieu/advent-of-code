@@ -7,17 +7,9 @@ for (let i = 0; i < fish.length; i++) {
 }
 
 for (let day = 0; day < 256; day++) {
-    const parent = fishPopulation[0]
-    fishPopulation[0] = fishPopulation[1]
-    fishPopulation[1] = fishPopulation[2]
-    fishPopulation[2] = fishPopulation[3]
-    fishPopulation[3] = fishPopulation[4]
-    fishPopulation[4] = fishPopulation[5]
-    fishPopulation[5] = fishPopulation[6]
-    fishPopulation[6] = fishPopulation[7] + parent
-    fishPopulation[7] = fishPopulation[8]
-    fishPopulation[8] = parent
-
+    const parent = fishPopulation.shift();
+    fishPopulation.push(parent)
+    fishPopulation[6] += parent;
 }
 
 console.log(fishPopulation.reduce((sum, pop) => sum + pop))
