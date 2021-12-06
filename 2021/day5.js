@@ -501,19 +501,6 @@ const arr = [
     '160,751 -> 787,124',
 ]
 
-const tmp = [
-    '0,9 -> 5,9',
-    '8,0 -> 0,8',
-    '9,4 -> 3,4',
-    '2,2 -> 2,1',
-    '7,0 -> 7,4',
-    '6,4 -> 2,0',
-    '0,9 -> 2,9',
-    '3,4 -> 1,4',
-    '0,0 -> 8,8',
-    '5,5 -> 8,2',
-]
-
 const splittedArr = arr.flatMap(item => item.split(' -> '));
 const splitted2Arr = splittedArr.map(item => item.split(',')).map(item => item.map(item => +item));
 
@@ -530,8 +517,6 @@ for (var i = 0; i < splitted2Arr.length; i++) {
 }
 
 let matrix = [];
-
-
 
 for (var j = 0; j < maxXValue + 1; j++) {
     matrix[j] = [];
