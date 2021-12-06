@@ -558,7 +558,6 @@ for (var l = 0; l < filteredArr.length; l += 2) {
         var min = Math.min(filteredArr[l][1], filteredArr[l + 1][1])
         for (var k = min; k <= length + min; k++) {
             matrix[k][filteredArr[l][0]] = matrix[k][filteredArr[l][0]] + 1;
-
         }
     } else if (lenghtX === lenghtY) {
 
@@ -569,10 +568,7 @@ for (var l = 0; l < filteredArr.length; l += 2) {
             matrix[filteredArr[l][1] + k * sensY][filteredArr[l][0] + k * sensX] = matrix[filteredArr[l][1] + k * sensY][filteredArr[l][0] + k * sensX] + 1;
         }
     }
-
-
 }
-
 
 var numberOfTwos = 0;
 
